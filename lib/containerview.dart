@@ -31,6 +31,14 @@ class _ContainerViewState extends State<ContainerView> {
                   width: double.infinity,
                   fit: BoxFit.cover,
                 ),
+                Opacity(
+                  opacity: .6,
+                  child: Container(
+                    color: Colors.black,
+                    height: size.height,
+                    width: size.width,
+                  ),
+                ),
                 Positioned(
                   top: 60,
                   left: 20,
@@ -99,11 +107,11 @@ class _ContainerViewState extends State<ContainerView> {
                         children: [
                           Positioned(
                             bottom: -230,
-                            left: 0,
+                            left: -40,
                             child: Image.asset(
-                              planets[index].iconImage,
-                              height: 500,
-                              width: 400,
+                              planets[index].iconImage ?? '',
+                              height: size.height / 1.3,
+                              width: size.width / .9,
                               fit: BoxFit.cover,
                             ),
                           ),
@@ -118,7 +126,7 @@ class _ContainerViewState extends State<ContainerView> {
                   child: Column(
                     children: List.generate(
                       planets.length,
-                      (index) => buildDot(index),
+                      (index) => buildDot(index, size),
                     ),
                   ),
                 ),
@@ -138,10 +146,10 @@ class _ContainerViewState extends State<ContainerView> {
     );
   }
 
-  AnimatedContainer buildDot(int index) {
+  AnimatedContainer buildDot(int index, Size size) {
     return AnimatedContainer(
-      height: 10,
-      width: 10,
+      height: size.height / 30,
+      width: size.width / 30,
       margin: EdgeInsets.symmetric(vertical: 5),
       duration: Duration(milliseconds: 287),
       curve: Curves.bounceInOut,
@@ -149,7 +157,7 @@ class _ContainerViewState extends State<ContainerView> {
         border: Border.all(color: Colors.yellow),
         color:
             currentPage == index ? Colors.white : Colors.transparent,
-        borderRadius: BorderRadius.circular(30),
+        shape: BoxShape.circle,
       ),
     );
   }
@@ -159,9 +167,10 @@ class DisplayText extends StatelessWidget {
   const DisplayText({
     Key key,
     this.fontSize,
-    this.text,
+    this.text, this.color = Colors.white,
   }) : super(key: key);
 
+  final Color color;
   final double fontSize;
   final String text;
   @override
@@ -171,7 +180,9 @@ class DisplayText extends StatelessWidget {
       style: TextStyle(
         fontFamily: 'kaushan script',
         fontSize: fontSize,
+        color: color,
       ),
+      maxLines: 7,
     );
   }
 }
