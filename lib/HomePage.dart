@@ -6,6 +6,9 @@ import 'package:universe_brief/Info.dart';
 import 'Components.dart';
 import 'Expanded_Page.dart';
 
+
+
+// Swiper Package Used
 class HomePage extends StatefulWidget {
   @override
   _HomePageState createState() => _HomePageState();
@@ -31,13 +34,13 @@ class _HomePageState extends State<HomePage> {
               Container(
                 height: 500,
                 width: double.infinity,
-                child: Swiper(
-                  itemCount: planets.length,
-                  itemWidth: MediaQuery.of(context).size.width - 100,
+                child: Swiper( // predefined package used
+                  itemCount: planets.length, // length
+                  itemWidth: MediaQuery.of(context).size.width - 100, // size of screen
                   layout: SwiperLayout.STACK,
                   duration: 3,
                   pagination: SwiperPagination(
-                    builder: DotSwiperPaginationBuilder(
+                    builder: DotSwiperPaginationBuilder(  // doted indicator of page changing
                       activeColor: secondaryTextColor,
                       color: Colors.blueGrey[100],
                       size: 8,
