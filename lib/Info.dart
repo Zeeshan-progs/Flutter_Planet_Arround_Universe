@@ -11,6 +11,7 @@ class PlanetInfo {
   final String mass;
   final String background;
   final String gravity;
+  final String temperature;
   final String lengthOfDay;
   final List<String> images;
 
@@ -18,6 +19,7 @@ class PlanetInfo {
     this.position, {
     this.background,
     this.name,
+    this.temperature,
     this.gravity,
     this.distance,
     this.orbitalPeriod,
@@ -36,6 +38,8 @@ List<PlanetInfo> planets = [
   PlanetInfo(1,
       gifs: 'assets/gifs/mercury.gif',
       name: 'Mercury',
+      temperature:
+          ' Min -> -275 °F (- 170°C)	| Max -> +840 °F (+ 449°C)',
       distance: '57.91 million km',
       gravity: "3.7 m/s ^2",
       lengthOfDay: '58d 15h 30m ',
@@ -58,6 +62,8 @@ List<PlanetInfo> planets = [
       name: 'Venus',
       distance: '108.2 million km',
       gravity: "8.87 m/s ^2",
+      temperature:
+          ' Min-> +870 °F (+ 465°C) | Max->	+870 °F (+ 465°C)',
       lengthOfDay: '116d 18h 0m ',
       orbitalPeriod: '225 Days',
       radius: '6,051.8 km',
@@ -79,6 +85,8 @@ List<PlanetInfo> planets = [
       name: 'Earth',
       distance: '149.6 million km',
       gravity: "9.80-7 m/s ^2",
+      temperature:
+          ' Min -> -129 °F (- 89°C) | Max ->	+136 °F (+ 58°C)',
       lengthOfDay: '23h 56m ',
       orbitalPeriod: '365 Days',
       radius: '6,371 km',
@@ -98,6 +106,8 @@ List<PlanetInfo> planets = [
   PlanetInfo(4,
       name: 'Mars',
       distance: '227.9 million km',
+      temperature:
+          'Min -> -195 °F (- 125°C) | Max ->	+ 70 °F (+ 20°C)',
       gravity: "3.711 m/s ^2",
       lengthOfDay: ' 1d h 37m ',
       orbitalPeriod: '387 Days',
@@ -118,15 +128,16 @@ List<PlanetInfo> planets = [
   PlanetInfo(5,
       name: 'Jupiter',
       distance: '778.5 million km',
+      temperature:
+          'Min ->  -234 °F (-145°C) | Max ->	1,340 °F (725 °C)',
       gravity: "24.79 m/s ^2",
       lengthOfDay: ' 0d 9h 56m ',
       orbitalPeriod: '12 years',
       radius: '69,911  km',
       mass: '1.898 × 10^27 kg',
-      iconImage: 'assets/jupiter.png',
-
       gifs: 'assets/gifs/jupiter.gif',
       specification: ' Largest / Biggest Planet',
+      iconImage: 'assets/jupiter.png',
       background: 'assets/background/jupiter.png',
       description:
           "The fifth planet from the sun, Jupiter is a giant gas world that is the most massive planet in our solar system — more than twice as massive as all the other planets combined, according to NASA. Its swirling clouds are colorful due to different types of trace gases. And a major feature in its swirling clouds is the Great Red Spot, a giant storm more than 10,000 miles wide. It has raged at more than 400 mph for the last 150 years, at least. Jupiter has a strong magnetic field, and with 75 moons, it looks a bit like a miniature solar system.",
@@ -141,17 +152,19 @@ List<PlanetInfo> planets = [
       name: 'Saturn',
       distance: '1.434  billion km',
       gravity: "10.44 m/s ^2",
+      temperature:
+          ' Min -> -218°F (-138°C)  |  Max ->  +14,972°F (+8,300 °C.)',
       lengthOfDay: ' 0d 10h 42m ',
       orbitalPeriod: '29 years',
       radius: '58,232  km',
       mass: '5.683 × 10^26 kg',
       specification:
-          ' Most Moon Of Any Planet (69 in total) 15 is Unknown( Not Named Yet) ',
+          ' Most Moon Of Any Planet ',
       gifs: 'assets/gifs/saturn.gif',
       iconImage: 'assets/saturn.png',
       background: 'assets/background/saturn.jpg',
       description:
-          "The sixth planet from the sun, Saturn is known most for its rings. When polymath Galileo Galilei first studied Saturn in the early 1600s, he thought it was an object with three parts: a planet and two large moons on either side. Not knowing he was seeing a planet with rings, the stumped astronomer entered a small drawing — a symbol with one large circle and two smaller ones — in his notebook, as a noun in a sentence describing his discovery. More than 40 years later, Christiaan Huygens proposed that they were rings. The rings are made of ice and rock and scientists are not yet sure how they formed. The gaseous planet is mostly hydrogen and helium and has numerous moons.",
+          " Most Known moons (69 in total) 15 is Unknown( Not Named Yet)  The sixth planet from the sun, Saturn is known most for its rings. When polymath Galileo Galilei first studied Saturn in the early 1600s, he thought it was an object with three parts: a planet and two large moons on either side. Not knowing he was seeing a planet with rings, the stumped astronomer entered a small drawing — a symbol with one large circle and two smaller ones — in his notebook, as a noun in a sentence describing his discovery. More than 40 years later, Christiaan Huygens proposed that they were rings. The rings are made of ice and rock and scientists are not yet sure how they formed. The gaseous planet is mostly hydrogen and helium and has numerous moons.",
       images: [
         'https://cdn.hswstatic.com/gif/saturn-lead-image.jpg',
         'https://www.thesun.co.uk/wp-content/uploads/2020/03/NINTCHDBPICT000572926401.jpg',
@@ -161,6 +174,8 @@ List<PlanetInfo> planets = [
       ]),
   PlanetInfo(7,
       name: 'Uranus',
+      temperature:
+          ' Min -> -371 °F (-223°C)  |  Max ->  -320°F (-195°C)',
       distance: '2.871  billion km',
       gravity: "8.87 m/s ^2",
       lengthOfDay: ' 0d 17h 14m ',
@@ -184,6 +199,8 @@ List<PlanetInfo> planets = [
   PlanetInfo(8,
       name: 'Neptune',
       distance: '4.495  billion km',
+      temperature:
+          ' Min -> -218 °C (-360 °F) Max -> -200 °C (-328 °F)',
       gravity: "11.15 m/s ^2",
       lengthOfDay: ' 0d 16h 6m ',
       orbitalPeriod: '165 years',
