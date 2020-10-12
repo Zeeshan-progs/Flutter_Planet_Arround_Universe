@@ -6,8 +6,6 @@ import 'package:universe_brief/Info.dart';
 import 'Components.dart';
 import 'Expanded_Page.dart';
 
-
-
 // Swiper Package Used
 class HomePage extends StatefulWidget {
   @override
@@ -34,13 +32,16 @@ class _HomePageState extends State<HomePage> {
               Container(
                 height: 500,
                 width: double.infinity,
-                child: Swiper( // predefined package used
+                child: Swiper(
+                  // predefined package used
                   itemCount: planets.length, // length
-                  itemWidth: MediaQuery.of(context).size.width - 100, // size of screen
+                  itemWidth:
+                      MediaQuery.of(context).size.width - 100, // size of screen
                   layout: SwiperLayout.STACK,
                   duration: 3,
                   pagination: SwiperPagination(
-                    builder: DotSwiperPaginationBuilder(  // doted indicator of page changing
+                    builder: DotSwiperPaginationBuilder(
+                      // doted indicator of page changing
                       activeColor: secondaryTextColor,
                       color: Colors.blueGrey[100],
                       size: 8,
@@ -54,8 +55,7 @@ class _HomePageState extends State<HomePage> {
                         Navigator.push(
                           context,
                           PageRouteBuilder(
-                            pageBuilder: (context, a, b) =>
-                                ExpandedView(
+                            pageBuilder: (context, a, b) => ExpandedView(
                               planetInfo: planets[index],
                             ),
                           ),
@@ -72,8 +72,7 @@ class _HomePageState extends State<HomePage> {
                               borderRadius: BorderRadius.circular(30),
                             ),
                             child: Column(
-                              crossAxisAlignment:
-                                  CrossAxisAlignment.center,
+                              crossAxisAlignment: CrossAxisAlignment.center,
                               children: [
                                 SizedBox(height: 150),
                                 Text(

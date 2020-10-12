@@ -198,15 +198,15 @@ class ExpandedView extends StatelessWidget {
                     ),
                   ],
                 ),
-                SizedBox(height:30),
+                SizedBox(height: 30),
                 Divider(),
-                SizedBox(height:20),
+                SizedBox(height: 20),
                 Stack(
                   children: [
                     Opacity(
                       opacity: .7,
-                                          child: Padding(
-                        padding: const EdgeInsets.only(left:38.0),
+                      child: Padding(
+                        padding: const EdgeInsets.only(left: 38.0),
                         child: Image.asset(
                           planetInfo.gifs,
                           fit: BoxFit.cover,
