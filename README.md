@@ -1,7 +1,6 @@
 # universe_brief
 
 
-# Universe Around Us
 
 
 
